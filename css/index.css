@@ -29,7 +29,7 @@ nav {
     height: 80px;
     position: fixed;
     top: 0px;
-    background-color: #ffffff75;
+    background-color: #ffffff80;
 }
 
 #brand {
@@ -122,6 +122,9 @@ nav {
     justify-content: space-between;
     align-self: flex-end;
 }
+#noticelink{
+    color: #212121;
+}
 
 #link-wrap {
     display: none;
@@ -150,6 +153,14 @@ nav {
 .link a:hover{
     border-bottom:1px solid #263238; 
 }
+#notice{
+    display: flex;
+    box-sizing: border-box;
+    padding: 4%;
+    width: 100%;
+    background-color: #b0bec5;
+}
+
 
 #sc2{
     background-color: #eeeeee;
@@ -290,4 +301,7 @@ footer p{
     width: 100%;
     text-align: center;
     padding-top: 2%;
+}
+#address p{
+    text-align: left;
 }

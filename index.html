@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGEC</title>
     <link rel="stylesheet" href="css/index.css">
-    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet">
 </head>
 
 <body>
@@ -100,14 +100,19 @@
             <div id="foot">
                 <div>
                     <h3> KGEC is affliated to
-                        <br> MAKAUT (formerely WBUT).</h3>
+                        <br> MAKAUT (formerely WBUT),
+                        <br> offering B.Tech, M.Tech & MCA degrees
+                        </h3>
                 </div>
                 <div>
-                    <h3>KGEC is an Enginnering College
-                        <br> providing technical education
-                        <br> to Undergraduate and Postgarduate students</h3>
+                    <h3> <a id="noticelink" href="#notice"> Notice/Tender </a>
+                    </h3>
                 </div>
             </div>
+        </section>
+        <section id="notice">
+            <div id="not"></div>
+            <div id="tender"></div>
         </section>
         <section id="sc2">
             <div class="head">
@@ -161,7 +166,7 @@
 
                 </div>
                 <div class="alt6">
-                    <p> Facilities</p>
+                    <p>Infrastructure and Facilities</p>
                     <a href="">
                         <img src="img/image(1).png" width="10%" alt="">
                     </a>
@@ -252,21 +257,25 @@
             </div>
         </div>
         <p>
-                <img src="img/icons/baseline_copyright_white_24dp.png" width="12px" alt=""> Copyright reserved by Kalyani Government Enginnering College</p>
+            <img src="img/icons/baseline_copyright_white_24dp.png" width="12px" alt=""> Copyright reserved by Kalyani Government Enginnering College</p>
     </footer>
     <script>
         let a = 1;
         let ele = document.getElementById("nav-icon");
         let nav = document.getElementById("link-wrap");
+        let navwrap = document.getElementById("nav");
 
         function toggle() {
             if (a) {
                 ele.classList.add("open");
                 nav.style.display = "flex";
+                navwrap.style.backgroundColor = "#ffffff"
                 a = 0;
             } else {
                 ele.classList.remove("open");
                 nav.style.display = "none";
+                navwrap.style.backgroundColor = "#ffffff80"
+
                 a = 1;
             }
         }
