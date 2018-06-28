@@ -5,7 +5,153 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>KGEC</title>
-    <link rel="stylesheet" href="css/index.css">
+    <style>
+        body,
+        html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+            left: 0;
+            top: 0;
+            font-size: 100%;
+            font-family: sans-serif;
+            color: #263238;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            flex-direction: column;
+        }
+
+        #nav {
+            box-sizing: border-box;
+            width: 100%;
+            padding-left: 3%;
+            padding-right: 3%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+            position: fixed;
+            top: 0px;
+            background-color: #ffffff80;
+            z-index: 9;
+        }
+
+        #brand {
+            line-height: 80px;
+            font-size: 32px;
+            margin: 0;
+        }
+
+        #nav-icon {
+            width: 40px;
+            height: 80px;
+            margin-left: 15px;
+            margin-right: 15px;
+            position: relative;
+            transform: rotate(0deg);
+            cursor: pointer;
+        }
+
+        #nav-icon span {
+            display: block;
+            position: absolute;
+            height: 2px;
+            width: 100%;
+            background: #263238;
+            border-radius: 2px;
+            opacity: 1;
+            left: 0;
+            transform: rotate(0deg);
+            transition: .25s ease-in-out;
+        }
+
+        #nav-icon span:nth-child(1) {
+            top: 28px;
+        }
+
+        #nav-icon span:nth-child(2) {
+            top: 40px;
+        }
+
+        #nav-icon span:nth-child(3) {
+            top: 50px;
+        }
+
+        #nav-icon.open span:nth-child(1) {
+            top: 40px;
+            transform: rotate(135deg);
+        }
+
+        #nav-icon.open span:nth-child(2) {
+            opacity: 0;
+            left: -60px;
+        }
+
+        #nav-icon.open span:nth-child(3) {
+            top: 40px;
+            transform: rotate(-135deg);
+        }
+
+        #home {
+            box-sizing: border-box;
+            width: 100%;
+            height: 100vh;
+            padding: 3%;
+            display: flex;
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            flex-direction: row;
+        }
+
+        #foot {
+            display: flex;
+            width: 100%;
+            padding: 1%;
+            justify-content: space-between;
+            align-self: flex-end;
+        }
+
+        #noticelink {
+            color: #212121;
+        }
+
+        #link-wrap {
+            display: none;
+            position: fixed;
+            top: 80px;
+            justify-content: space-around;
+            box-sizing: border-box;
+            padding: 2%;
+            width: 100%;
+            background-color: #ffffff;
+            font-size: 1.2em;
+            line-height: 1.5em;
+            z-index: 9;
+        }
+
+        .link {
+            padding-left: 1%;
+            padding-right: 1%;
+        }
+
+        .link h3 {
+            border-bottom: 1px solid #263238;
+        }
+
+        .link a {
+            text-decoration: none;
+            color: #212121;
+        }
+
+        .link a:hover {
+            border-bottom: 1px solid #263238;
+        }
+    </style>
     <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">  -->
 </head>
 
@@ -143,7 +289,9 @@
                 region in association with the industry houses of the locality and outside. Keeping pace with the global
                 technological developments through continuing education programmes is its another cherished ambition.
             </div>
-            <h3><a id="vision" href="#">Know our vision</a></h3>
+            <h3>
+                <a id="vision" href="#">Know our vision</a>
+            </h3>
         </section>
         <section id="sc3">
             <div class="head">
@@ -285,6 +433,8 @@
         <p>
             <img src="img/icons/baseline_copyright_white_24dp.png" width="12px" alt=""> Copyright reserved by Kalyani Government Enginnering College</p>
     </footer>
+    <link rel="stylesheet" href="css/index.css">
+
     <script>
         let a = 1;
         let ele = document.getElementById("nav-icon");
