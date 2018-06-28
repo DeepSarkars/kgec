@@ -172,7 +172,10 @@ nav {
     box-sizing: border-box;
     width: 50%;
 }
-
+.flex{
+    display: flex;
+    justify-content: center;
+}
 
 #sc2{
     background-color: #eeeeee;
